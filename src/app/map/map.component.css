@@ -1,0 +1,13 @@
+#vmap {
+    width: auto;
+    height: 100%;
+}
+.fullscr {
+    width: 100%;
+    height: calc(100vh - 78px);
+    margin-top: 78px;
+    background: pink;
+}
+.jqvmap-zoomin {
+    width: 200px;
+}
