@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Segoe UI', sans-serif;
+    /* font-family: 'Iceland', cursive; */
+    text-align: center;
+}

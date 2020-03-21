@@ -1,0 +1,207 @@
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 78px;
+    background: #F8F8F9;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 5;
+}
+  
+header .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex: 1;
+    margin-left: 2%;
+    width: 100%; height: auto; 
+}
+
+
+.logo p {
+    color: #5f5f79;
+    margin-left: 10px;
+    margin-top: 15px;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .logo .logo-img {
+    width: 40px;
+}
+
+nav {
+    padding: 30px;
+    width: 100%;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: inline-block;
+    outline: none;
+    color: #5f5f79;
+    margin-left: 30px;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+}
+
+nav ul li a:hover {
+    color: #808080;
+    text-decoration: none;
+}
+
+nav ul li:not(:first-child) {
+    margin-left: 25px;
+}
+
+#nav:checked + .nav-open {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+#nav:checked + .nav-open i {
+    background: #fff;
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+#nav:checked + .nav-open i:nth-child(1) {
+    -webkit-transform: translateY(6px) rotate(180deg);
+            transform: translateY(6px) rotate(180deg);
+}
+
+#nav:checked + .nav-open i:nth-child(2) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#nav:checked + .nav-open i:nth-child(3) {
+    -webkit-transform: translateY(-6px) rotate(90deg);
+            transform: translateY(-6px) rotate(90deg);
+}
+
+#nav:checked ~ .nav-container {
+    z-index: 999;
+    opacity: 1;
+    visibility: visible;
+}
+
+#nav:checked ~ .nav-container ul li a {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
+
+.hidden {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100vw;
+        z-index: -1;
+        background: #1f2227;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
+    .nav-container ul {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        width: 100%;
+    }
+    .nav-container ul li {
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: right;
+        margin-bottom: 10px;
+    }
+    .nav-container ul li a {
+        padding: 10px 25px;
+        opacity: 0;
+        visibility: hidden;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 600;
+        -webkit-transform: translateY(-20px);
+                transform: translateY(-20px);
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
+    .nav-container ul li:nth-child(1) a {
+        -webkit-transition-delay: 0.2s;
+                transition-delay: 0.2s;
+    }
+    .nav-container ul li:nth-child(2) a {
+        -webkit-transition-delay: 0.3s;
+                transition-delay: 0.3s;
+    }
+    .nav-container ul li:nth-child(3) a {
+        -webkit-transition-delay: 0.4s;
+                transition-delay: 0.4s;
+    }
+    .nav-container ul li:nth-child(4) a {
+        -webkit-transition-delay: 0.5s;
+                transition-delay: 0.5s;
+    }
+    .nav-container ul li:not(:first-child) {
+        margin-left: 0;
+    }
+    .nav-open {
+        position: absolute;
+        right: 10px;
+        top: 20px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        z-index: 9999;
+        border-radius: 50%;
+    }
+    .nav-open i {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #1f2227;
+        border-radius: 2px;
+        margin-left: 14px;
+    }
+    .nav-open i:nth-child(1) {
+        margin-top: 16px;
+    }
+    .nav-open i:nth-child(2) {
+        margin-top: 4px;
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-open i:nth-child(3) {
+        margin-top: 4px;
+    }
+}
