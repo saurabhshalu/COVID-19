@@ -8,18 +8,55 @@
     flex: 1;
 }
 
-/* .floating-details {
+.floating-details {
     position: absolute; 
     bottom: 0;
     z-index: 333;
-    max-width: 25%;
+    max-width: 20%;
+    min-width: 130px;
     width: 100%;
-    padding: 10px;
-} */
+    margin: 10px;
+}
+.panel-heading {
+    font-size: large;
+    font-weight: 700;
+}
+
+.panel-heading.date {
+    font-weight: 600;
+    font-size: medium;
+}
+
+.panel-body {
+    font-family: 'Iceland', cursive;
+    font-size: 28px;
+}
+
+#floating-data {
+    display: none;
+}
+
 
 @media screen and (max-width: 1400px) {
     .map-container {
         margin-top: 60px;
         height: calc(100vh - 60px);
+    }
+    .panel-heading {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .panel-body {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+        height: 25px;
+        font-family: 'Segoe UI', sans-serif;
+    }
+    .panel {
+        margin: 5px;
     }
 }
