@@ -2,7 +2,24 @@
     margin-top: 78px;
     height: calc(100vh - 78px);
     display: flex;
+    position: relative;
 }
 #vmap {
     flex: 1;
+}
+
+/* .floating-details {
+    position: absolute; 
+    bottom: 0;
+    z-index: 333;
+    max-width: 25%;
+    width: 100%;
+    padding: 10px;
+} */
+
+@media screen and (max-width: 1400px) {
+    .map-container {
+        margin-top: 60px;
+        height: calc(100vh - 60px);
+    }
 }
