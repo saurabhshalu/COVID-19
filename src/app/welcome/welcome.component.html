@@ -1,23 +1,5 @@
 <main>
     <div class="left">
-       <!-- <table>
-           <tr>
-               <td>cases</td>
-               <td></td>
-           </tr>
-           <tr>
-                <td>deaths</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>recovered</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><button class="btn btn-danger">clickme</button></td>
-                <td></td>
-            </tr>
-       </table> -->
        <div *ngIf="data!=null" class="panel-group">
             <div class="panel panel-primary">
                 <div class="panel-heading">Total Cases</div>
@@ -35,7 +17,7 @@
             </div>
 
             <div class="panel panel-warning">
-                <div class="panel-heading date">Last updated on {{data.updated | date: 'dd-MMM-yyyy' | uppercase}}</div>
+                <div class="panel-heading date">Last updated on {{data.updated | date: 'dd-MMM-yyyy, hh:mm a' | uppercase}}</div>
             </div>
         </div>
     </div>

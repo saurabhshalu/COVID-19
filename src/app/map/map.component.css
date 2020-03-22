@@ -1,13 +1,8 @@
-#vmap {
-    width: auto;
-    height: 100%;
-}
-.fullscr {
-    width: 100%;
-    height: calc(100vh - 78px);
+.map-container {
     margin-top: 78px;
-    background: pink;
+    height: calc(100vh - 78px);
+    display: flex;
 }
-.jqvmap-zoomin {
-    width: 200px;
+#vmap {
+    flex: 1;
 }
