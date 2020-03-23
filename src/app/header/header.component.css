@@ -5,7 +5,7 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 78px;
+    height: 60px;
     background: #F8F8F9;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -19,6 +19,7 @@ header .logo {
     display: flex;
     flex: 1;
     margin-left: 2%;
+    margin-top: 12px;
     width: 100%; height: auto; 
 }
 
@@ -26,10 +27,11 @@ header .logo {
 .logo p {
     color: #5f5f79;
     margin-left: 10px;
-    margin-top: 15px;
+    margin-top: 5px;
     font-size: 22px;
     text-decoration: none;
     font-weight: bold;
+    width: 120px;
 }
 
 header .logo .logo-img {
@@ -53,7 +55,8 @@ nav ul li a {
     display: inline-block;
     outline: none;
     color: #5f5f79;
-    margin-left: 30px;
+     margin-left: 30px;
+     margin-bottom: 8px;
     font-size: 22px;
     text-decoration: none;
     font-weight: bold;
@@ -208,8 +211,55 @@ nav ul li:not(:first-child) {
         margin-top: 4px;
     }
 }
-@media screen and (max-width: 1400px) {
-    header {
-        height: 60px;
-    }
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: block;
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0); /* Black background with opacity */
+    z-index: 1000; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+
+.centered{
+    width:400px;
+    height:400px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.blob-1,.blob-2{
+	width:70px;
+	height:70px;
+	position:absolute;
+	background:#fff;
+	border-radius:50%;
+	top:50%;left:50%;
+	transform:translate(-50%,-50%);
+}
+.blob-1{
+	left:20%;
+	animation:osc-l 2.5s ease infinite;
+}
+.blob-2{
+	left:80%;
+	animation:osc-r 2.5s ease infinite;
+	background:#0ff;
+}
+@keyframes osc-l{
+	0%{left:20%;}
+	50%{left:50%;}
+	100%{left:20%;}
+}
+@keyframes osc-r{
+	0%{left:80%;}
+	50%{left:50%;}
+	100%{left:80%;}
 }

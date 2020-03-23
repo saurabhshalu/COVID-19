@@ -1,6 +1,6 @@
 .map-container {
-    margin-top: 78px;
-    height: calc(100vh - 78px);
+    margin-top: 60px;
+    height: calc(100vh - 60px);
     display: flex;
     position: relative;
 }
@@ -17,6 +17,22 @@
     width: 100%;
     margin: 10px;
 }
+
+#float-info {
+    position: absolute; 
+    top: 0;
+    z-index: 2;
+    min-width: 130px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    left: 0;
+    right: 0;
+    color: blue;
+    font-weight: 600;
+}
+
 .panel-heading {
     font-size: large;
     font-weight: 700;
@@ -42,10 +58,6 @@
 
 
 @media screen and (max-width: 1400px) {
-    .map-container {
-        margin-top: 60px;
-        height: calc(100vh - 60px);
-    }
     .panel-heading {
         font-size: 18px;
         font-weight: 500;

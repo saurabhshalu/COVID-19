@@ -10,9 +10,7 @@ declare var $: any;
 export class MapComponent implements OnInit {
 
   constructor(private http: HttpClient, private app: AppComponent) { }
-
-  // public c_codes: any = null;
-  // public covidData: any = null;
+  
   public colorlist: any = {}
   
   public calculateEverything() {
@@ -35,6 +33,7 @@ export class MapComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    (<HTMLInputElement>document.getElementById("overlay")).style.display = "block";
     this.http.get('./assets/map_data/c_codes.json').subscribe((data: any) => {
         this.app.c_codes = data;
         //this.http.get('https://corona.lmao.ninja/countries').subscribe((data: any[]) => {
@@ -104,10 +103,12 @@ export class MapComponent implements OnInit {
             this.app.covidData = null;
             console.log(err);
         });
+        (<HTMLInputElement>document.getElementById("overlay")).style.display = "none";
     },
     (err: any[]) => {
         this.app.c_codes = null;
         console.log(err);
+        (<HTMLInputElement>document.getElementById("overlay")).style.display = "none";
     });
   }
   ngAfterViewInit(): void {

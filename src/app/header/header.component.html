@@ -1,7 +1,11 @@
 <header>
     <div class="logo">
+        <a  [routerLink] = "'/'">
         <img class="logo-img" src="../../assets/virus32.svg" alt="logo">
-        <p>COVID19</p>
+        </a>
+        <a [routerLink] = "'/'" style="text-decoration: none;">
+        <p>COVID-19</p>
+        </a>
      </div>
      <nav>
         <input type="checkbox" id="nav" class="hidden"/>
@@ -12,8 +16,14 @@
             <li><a [routerLink] = "'/'" onclick="hideNav();" class="anchor">Home</a></li>
             <li><a [routerLink] = "'/map'" onclick="hideNav();" class="anchor">Map</a></li>
             <li><a [routerLink] = "'/details'" onclick="hideNav();" class="anchor">Details</a></li>
-            <li><a [routerLink] = "'/contact'" onclick="hideNav();" class="anchor">Contact Me</a></li>
+            <li><a [routerLink] = "'/help'" onclick="hideNav();" class="anchor">Help</a></li>
             </ul>
         </div>
      </nav>
 </header>
+<div id="overlay" #overlay>
+    <div class = "centered">
+        <div class = "blob-1"></div>
+        <div class = "blob-2"></div>
+    </div>
+</div>

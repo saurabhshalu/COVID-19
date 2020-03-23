@@ -10,6 +10,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { MapComponent } from './map/map.component';
 import { DoughnutComponent } from './doughnut/doughnut.component';
 import { DetailsComponent } from './details/details.component';
+import { HelpComponent } from './help/help.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DetailsComponent } from './details/details.component';
     WelcomeComponent,
     MapComponent,
     DoughnutComponent,
-    DetailsComponent
+    DetailsComponent,
+    HelpComponent
   ],
   imports: [
     BrowserModule,

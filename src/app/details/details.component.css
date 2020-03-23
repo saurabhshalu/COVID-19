@@ -1,6 +1,6 @@
 .detail-container {
-    margin-top: 78px;
-    max-height: calc(100vh - 78px);
+    margin-top: 60px;
+    max-height: calc(100vh - 60px);
     max-width: 100vw;
     overflow: auto;
     
@@ -21,10 +21,4 @@ tbody th {
 thead th:first-child {
   left: 0;
   z-index: 1;
-}
-@media screen and (max-width: 1400px) {
-    .detail-container {
-        margin-top: 60px;
-        min-height: calc(100vh - 60px);
-    }
 }
