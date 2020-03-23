@@ -36,8 +36,8 @@ export class MapComponent implements OnInit {
     (<HTMLInputElement>document.getElementById("overlay")).style.display = "block";
     this.http.get('./assets/map_data/c_codes.json').subscribe((data: any) => {
         this.app.c_codes = data;
-        //this.http.get('https://corona.lmao.ninja/countries').subscribe((data: any[]) => {
-        this.http.get('./assets/local_corona.json').subscribe((cdata: any[]) => {
+        this.http.get('https://corona.lmao.ninja/countries').subscribe((cdata: any[]) => {
+        //this.http.get('./assets/local_corona.json').subscribe((cdata: any[]) => {
           this.app.covidData = cdata;
           $(document).ready(function() {
             var caseslist = {};

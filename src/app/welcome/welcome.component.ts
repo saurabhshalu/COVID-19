@@ -18,8 +18,8 @@ export class WelcomeComponent implements OnInit {
   ngOnInit(): void {
     this.newChartData = null;      
     (<HTMLInputElement>document.getElementById("overlay")).style.display = "block";
-    //this.http.get('https://corona.lmao.ninja/all').subscribe((data: any[])=>{ 
-    this.http.get('./assets/all.json').subscribe((data: any[])=>{ 
+    this.http.get('https://corona.lmao.ninja/all').subscribe((data: any[])=>{ 
+    //this.http.get('./assets/all.json').subscribe((data: any[])=>{ 
       this.data = data;
       this.recovered = +data['recovered'];
       this.deaths = +data['deaths'];
