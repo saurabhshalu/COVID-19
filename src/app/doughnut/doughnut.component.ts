@@ -47,7 +47,6 @@ export class DoughnutComponent implements OnInit {
   ngOnChanges() {
     if (this.newChartData !== undefined || this.newChartData !==null) {
       this.chartData = this.newChartData;
-      console.log("New chart value detected");
     }
   }
 

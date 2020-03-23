@@ -11,9 +11,10 @@ export class DetailsComponent implements OnInit {
   constructor(private http: HttpClient,public app: AppComponent) { }
 
   ngOnInit(): void {
-    (<HTMLInputElement>document.getElementById("overlay")).style.display = "block";
-    this.http.get('https://corona.lmao.ninja/countries').subscribe((data: any[]) => {
-    //this.http.get('./assets/local_corona.json').subscribe((data: any[]) => {
+    if(this.app.covidData==null) {    
+      (<HTMLInputElement>document.getElementById("overlay")).style.display = "block";
+      this.http.get('https://corona.lmao.ninja/countries').subscribe((data: any[]) => {
+      //this.http.get('./assets/local_corona.json').subscribe((data: any[]) => {
         this.app.covidData = data;
         (<HTMLInputElement>document.getElementById("overlay")).style.display = "none";
       },
@@ -22,6 +23,6 @@ export class DetailsComponent implements OnInit {
         console.log(err);     
         (<HTMLInputElement>document.getElementById("overlay")).style.display = "none";
       });
+    } 
   }
-
 }
