@@ -1,0 +1,26 @@
+<div class="detail-container">       
+        <table class="table table-bordered">
+            <thead>
+            <tr class="warning">
+                <th class="text-center">Country</th>
+                <th class="text-center">Cases</th>
+                <th class="text-center">Today Cases</th>
+                <th class="text-center">Deaths</th>
+                <th class="text-center">Recovered</th>
+                <th class="text-center">Active</th>
+                <th class="text-center">Critical</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let item of app.covidData" class="active">
+                <th>{{item.country}}</th>
+                <td>{{item.cases}}</td>
+                <td>{{item.todayCases}}</td>
+                <td>{{item.deaths}}</td>
+                <td>{{item.recovered}}</td>
+                <td>{{item.active}}</td>
+                <td>{{item.critical}}</td>
+            </tr>
+            </tbody>
+        </table>
+</div>

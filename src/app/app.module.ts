@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { MapComponent } from './map/map.component';
 import { DoughnutComponent } from './doughnut/doughnut.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DoughnutComponent } from './doughnut/doughnut.component';
     HeaderComponent,
     WelcomeComponent,
     MapComponent,
-    DoughnutComponent
+    DoughnutComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -9,10 +9,10 @@
 
         <div class="nav-container">
             <ul>
-            <li><a onclick="hideNav();" class="anchor" href="#home">Home</a></li>
-            <li><a onclick="hideNav();" class="anchor" href="#skills">Skills</a></li>
-            <li><a onclick="hideNav();" class="anchor" href="#portfolio">Portfolio</a></li>
-            <li><a onclick="hideNav();" class="anchor" href="#contact">Contact Me</a></li>
+            <li><a [routerLink] = "'/'" onclick="hideNav();" class="anchor">Home</a></li>
+            <li><a [routerLink] = "'/map'" onclick="hideNav();" class="anchor">Map</a></li>
+            <li><a [routerLink] = "'/details'" onclick="hideNav();" class="anchor">Details</a></li>
+            <li><a [routerLink] = "'/contact'" onclick="hideNav();" class="anchor">Contact Me</a></li>
             </ul>
         </div>
      </nav>

@@ -11,7 +11,7 @@
 .floating-details {
     position: absolute; 
     bottom: 0;
-    z-index: 333;
+    z-index: 2;
     max-width: 20%;
     min-width: 130px;
     width: 100%;
@@ -29,7 +29,11 @@
 
 .panel-body {
     font-family: 'Iceland', cursive;
-    font-size: 28px;
+    font-size: 30px;
+    padding: 0px;
+}
+.panel {
+    margin: 10px;
 }
 
 #floating-data {

@@ -51,7 +51,11 @@ main {
 
 .panel-body {
     font-family: 'Iceland', cursive;
-    font-size: 28px;
+    font-size: 30px;
+    padding: 2px;
+}
+.panel {
+    margin: 10px;
 }
 
 
@@ -80,5 +84,9 @@ main {
         margin-top: -50px;
         width: 100%;
         height: 100%;
+    }
+    .panel-heading.date {
+        font-weight: 500;
+        font-size: small;
     }
 }

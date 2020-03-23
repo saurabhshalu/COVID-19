@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AppComponent } from '../app.component';
 declare var $: any;
 @Component({
   selector: 'app-map',
@@ -8,20 +9,16 @@ declare var $: any;
 })
 export class MapComponent implements OnInit {
 
-  public mycolors: any = {
-    in: 'red',
-    pk: 'blue'
-  };
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private app: AppComponent) { }
 
-  public c_codes: any = null;
-  public covidData: any = null;
+  // public c_codes: any = null;
+  // public covidData: any = null;
   public colorlist: any = {}
   
   public calculateEverything() {
-    console.log(this.c_codes['INDIA'])
-    let maxcase = this.covidData[0]['cases']
-    this.covidData.forEach(element => {
+    console.log(this.app.c_codes['INDIA'])
+    let maxcase = this.app.covidData[0]['cases']
+    this.app.covidData.forEach(element => {
       let per: number = +(element['cases']/maxcase).toFixed(2);
       if (per <= 0.05) {
         per = 0.2;
@@ -30,7 +27,7 @@ export class MapComponent implements OnInit {
         per = 0.7;
       }
       let t1 = element['country'].toUpperCase()
-      let c = this.c_codes[t1]
+      let c = this.app.c_codes[t1]
       if (c!==undefined) {
         this.colorlist[c.toLowerCase()] = 'rgba(255,0,0,' + per + ')';
       }
@@ -39,10 +36,10 @@ export class MapComponent implements OnInit {
 
   ngOnInit(): void {
     this.http.get('./assets/map_data/c_codes.json').subscribe((data: any) => {
-        this.c_codes = data;
+        this.app.c_codes = data;
         //this.http.get('https://corona.lmao.ninja/countries').subscribe((data: any[]) => {
         this.http.get('./assets/local_corona.json').subscribe((cdata: any[]) => {
-          this.covidData = cdata;
+          this.app.covidData = cdata;
           $(document).ready(function() {
             var caseslist = {};
             var deathslist = {};
@@ -56,18 +53,6 @@ export class MapComponent implements OnInit {
                 recoveredlist[t1] = cdata[i]['recovered'];
               }
             }
-
-            // function getIndex(name, data) {
-            //   let x = 0;
-            //   for(var i=0;i<data.length;i++) {
-            //     if(data[i]['country'].toUpperCase()==name.toUpperCase()) {    
-            //       return x;
-            //     }
-            //     x++;
-            //   }
-            //   return -1;
-            // }
-            
 
             $('#vmap').vectorMap({
               map: 'world_en',
@@ -116,12 +101,12 @@ export class MapComponent implements OnInit {
           }.bind(this));
         },
         (err: any[]) => {
-            this.covidData = null;
+            this.app.covidData = null;
             console.log(err);
         });
     },
     (err: any[]) => {
-        this.c_codes = null;
+        this.app.c_codes = null;
         console.log(err);
     });
   }
