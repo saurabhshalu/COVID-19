@@ -10,6 +10,7 @@ export class MaintainanceComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    (<HTMLInputElement>document.getElementById("overlay")).style.display = "none";
   }
 
 }
