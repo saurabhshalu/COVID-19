@@ -11,6 +11,7 @@ import { MapComponent } from './map/map.component';
 import { DoughnutComponent } from './doughnut/doughnut.component';
 import { DetailsComponent } from './details/details.component';
 import { HelpComponent } from './help/help.component';
+import { MaintainanceComponent } from './maintainance/maintainance.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HelpComponent } from './help/help.component';
     MapComponent,
     DoughnutComponent,
     DetailsComponent,
-    HelpComponent
+    HelpComponent,
+    MaintainanceComponent
   ],
   imports: [
     BrowserModule,
