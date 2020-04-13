@@ -2,8 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-doughnut',
-  templateUrl: './doughnut.component.html',
-  styleUrls: ['./doughnut.component.css']
+  templateUrl: './doughnut.component.html'
 })
 export class DoughnutComponent implements OnInit {
   @Input() newChartData;

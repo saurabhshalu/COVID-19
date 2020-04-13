@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { AppComponent } from '../app.component';
+import { CommonDataService } from '../commondata/commondata.service';
 @Component({
-  selector: 'app-details',
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
 
-  constructor(private http: HttpClient,public app: AppComponent) { }
+  constructor(private http: HttpClient, public app: CommonDataService) { }
 
   ngOnInit(): void {
     if(this.app.covidData==null) {    

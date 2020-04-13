@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { AppComponent } from '../app.component';
+import { CommonDataService } from '../commondata/commondata.service';
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
@@ -8,7 +8,7 @@ import { AppComponent } from '../app.component';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor(private http: HttpClient, public app:AppComponent) { }
+  constructor(private http: HttpClient, public app:CommonDataService) { }
 
   ngOnInit(): void {
     if(this.app.all_data==null) {    
