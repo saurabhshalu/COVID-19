@@ -13,7 +13,7 @@ export class WelcomeComponent implements OnInit {
   ngOnInit(): void {
     if(this.app.all_data==null) {    
       (<HTMLInputElement>document.getElementById("overlay")).style.display = "block";
-      this.http.get('https://corona.lmao.ninja/all').subscribe((data: any[])=>{ 
+      this.http.get('https://corona.lmao.ninja/v2/all').subscribe((data: any[])=>{ 
       //this.http.get('./assets/all.json').subscribe((data: any[])=>{
         this.app.all_data = data;
         this.app.recovered = +data['recovered'];
