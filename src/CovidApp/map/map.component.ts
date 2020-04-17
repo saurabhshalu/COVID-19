@@ -35,7 +35,7 @@ export class MapComponent implements OnInit {
     this.http.get('./assets/map_data/c_codes.json').subscribe((data: any) => {
       this.app.c_codes = data;
       if(this.app.covidData==null) {
-        this.http.get('https://corona.lmao.ninja/countries').subscribe((cdata: any[]) => {
+        this.http.get('https://corona.lmao.ninja/v2/countries').subscribe((cdata: any[]) => {
         //this.http.get('./assets/local_corona.json').subscribe((cdata: any[]) => {
           this.app.covidData = cdata;
           $(document).ready(function() {

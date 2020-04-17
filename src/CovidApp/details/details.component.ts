@@ -12,7 +12,7 @@ export class DetailsComponent implements OnInit {
   ngOnInit(): void {
     if(this.app.covidData==null) {    
       (<HTMLInputElement>document.getElementById("overlay")).style.display = "block";
-      this.http.get('https://corona.lmao.ninja/countries').subscribe((data: any[]) => {
+      this.http.get('https://corona.lmao.ninja/v2/countries').subscribe((data: any[]) => {
       //this.http.get('./assets/local_corona.json').subscribe((data: any[]) => {
         this.app.covidData = data;
         (<HTMLInputElement>document.getElementById("overlay")).style.display = "none";
